@@ -19,9 +19,7 @@ react-native link react-native-as-attribution-sdk-bridge
 ```
 ### iOS Platform Notes
 AppSamurai Attribution SDK targets iOS 10 or higher.
-Projects those use CocoaPods do not forget to run `pod install`
----
-You need to initialize ASAttributionSDK to use AppSamurai Attribution SDK. 
+Projects those use CocoaPods do not forget to run `pod install`. You need to initialize ASAttributionSDK to use AppSamurai Attribution SDK. 
 First, you need to import ASAttributionSDK module in your AppDelegate file;
 ```objc
 @import ASAttributionSDK;
@@ -35,7 +33,7 @@ Then you need to add the following initialization line to your application’s `
 
 ### Android Platform Notes
 Minimum supported SDK version is 14.
-You need to add `multidex` support to Android project. You can do this by adding following line to app’s gradle.
+You need to add `multidex` support to Android project. You can do this by adding the following line to app’s gradle.
 ```groovy
 defaultConfig {
     ....
@@ -44,7 +42,7 @@ defaultConfig {
 }
 ```
 
-Add `dependencies` following line in app/build.gradle, be sure to add the latest release for attributionsdk which is: [ ![Download](https://api.bintray.com/packages/appsamurai/maven/attribution/images/download.svg) ](https://bintray.com/appsamurai/maven/attribution/_latestVersion)
+Add the following dependency to the `dependencies` block in app/build.gradle. Be sure to add the latest release for attribution sdk which is: [ ![Download](https://api.bintray.com/packages/appsamurai/maven/attribution/images/download.svg) ](https://bintray.com/appsamurai/maven/attribution/_latestVersion)
 ```groovy
 implementation 'com.ppsmr.attribution.attributionsdk:attribution:1.0.2'
 ```
@@ -55,7 +53,7 @@ First, you need to import AttributionSDK module in your MainApplication file;
 import com.ppsmr.attribution.attributionsdk.AttributionSDK;
 ```
 
-Then you need to add the following initialization line to your application’s `onCreate` method in MainApplication:
+Then you need to add the following initialization line to your application’s `onCreate` method in MainApplication file:
 ```java
 @Override
 public void onCreate() {
@@ -67,6 +65,7 @@ public void onCreate() {
 "your-user-id" parameter should be your user id retrieved from AppSamurai User Dashboard, you can use your user id for integration purposes.
 
 **For Publishers Supporting Android API Level < 21**
+
 There are dependency problems for API Level lower than 21 when multi dex is enabled. In order to fix these problem, please import androidx.multidex.MultiDexApplication package instead of android.app.Application package in your MainApplication file:
 ```java
 import androidx.multidex.MultiDexApplication;
@@ -85,6 +84,7 @@ public class MainApplication extends MultiDexApplication implements ReactApplica
 import AsAttributionSdkBridge from 'react-native-as-attribution-sdk-bridge';
 ```
 **Custom Event Tracking**
+
 Using AppSamurai Attribution SDK, you are able to track the frequency of custom events by placing the following code piece into your own application code. You can also attach data to your events. If you are planning to attach data to your event, make sure your map is JSON serializable.
 ``` js
 AsAttributionSdkBridge.track("string-event-name")
@@ -110,7 +110,8 @@ AsAttributionSdkBridge.trackWithData("purchase", dataMap)
 ```
 
 **Log Level**
-AppSamurai SDK logging level can be changed with setLogLevel after SDK initialization. Available log levels can be "OFF", "DEBUG", "WARNING" and "ERROR". Default log level is "DEBUG".
+
+AppSamurai SDK logging level can be changed with setLogLevel after SDK initialization. Available log levels are "OFF", "DEBUG", "WARNING" and "ERROR". Default log level is "DEBUG".
 ``` js
 AsAttributionSdkBridge.setLogLevel("string-log-level")
 ```
@@ -118,5 +119,5 @@ AsAttributionSdkBridge.setLogLevel("string-log-level")
 ## Author
 App Samurai Mobile Team, mobile@appsamurai.com
 ## License
-MIT
+Copyright 2018 App Samurai Inc.
 [![alt text](https://appsamurai.com/wp-content/uploads/2014/12/web_home_cta_2.png "AppSamurai")](https://www.appsamurai.com)
