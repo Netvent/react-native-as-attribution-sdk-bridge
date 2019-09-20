@@ -111,7 +111,7 @@ AsAttributionSdkBridge.trackWithData("purchase", dataMap)
 
 **Log Level**
 
-AppSamurai SDK logging level can be changed with setLogLevel after SDK initialization. Available log levels can be "OFF", "DEBUG", "WARNING" and "ERROR". Default log level is "DEBUG".
+AppSamurai SDK logging level can be changed with setLogLevel after SDK initialization. Available log levels are "OFF", "DEBUG", "WARNING" and "ERROR". Default log level is "DEBUG".
 ``` js
 AsAttributionSdkBridge.setLogLevel("string-log-level")
 ```
