@@ -1,6 +1,8 @@
 # React Native Bridge For AppSamurai Attribution SDK
 React Native Bridge For AppSamurai Attribution SDK is a project for React Native users to use AppSamurai Attribution SDK.
 
+[![alt text](https://appsamurai.com/wp-content/uploads/2018/10/as_dark_logotype-8.png "AppSamurai")](https://www.appsamurai.com)
+
 ## Getting Started
 Add react-native-as-attribution-sdk-bridge to your dependencies with one of the options below(yarn or npm);
 ``` shell
