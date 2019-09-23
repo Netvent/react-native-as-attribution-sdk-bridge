@@ -2,25 +2,21 @@
   "name": "react-native-as-attribution-sdk-bridge",
   "title": "React Native As Attribution Sdk Bridge",
   "version": "1.0.0",
-  "description": "TODO",
+  "description": "AS Attribution SDK Bridge",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/github_account/react-native-as-attribution-sdk-bridge.git",
-    "baseUrl": "https://github.com/github_account/react-native-as-attribution-sdk-bridge"
+    "url": "git@github.com:Netvent/react-native-as-attribution-sdk-bridge.git",
+    "baseUrl": "https://github.com/Netvent/react-native-as-attribution-sdk-bridge"
   },
-  "keywords": [
-    "react-native"
-  ],
   "author": {
-    "name": "Your Name",
-    "email": "yourname@email.com"
+    "name": "App Samurai Mobile Team",
+    "email": "mobile@appsamurai.com"
   },
-  "license": "MIT",
-  "licenseFilename": "LICENSE",
+  "license": "Copyright 2018 App Samurai Inc.",
   "readmeFilename": "README.md",
   "peerDependencies": {
     "react": "^16.8.1",
