@@ -9,7 +9,7 @@ Add react-native-as-attribution-sdk-bridge to your dependencies with one of the 
 yarn add react-native-as-attribution-sdk-bridge
 ```
 ``` shell
-npm -install --save react-native-as-attribution-sdk-bridge
+npm install --save react-native-as-attribution-sdk-bridge
 ```
 Linking library
 react-native 0.60+ handles autolinking as it mentioned in [autolinking in react-native](https://github.com/react-native-community/cli/blob/master/docs/autolinking.md).
