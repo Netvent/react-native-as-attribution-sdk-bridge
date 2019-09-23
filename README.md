@@ -81,13 +81,13 @@ public class MainApplication extends MultiDexApplication implements ReactApplica
 
 If the previous solution does not fit for you, you can apply another solution from https://developer.android.com/studio/build/multidex.html#mdex-gradle.
 
-Add the following multidex dependency to the `dependencies` block in app/build.gradle. Be sure to add the latest release for multidex library. If you are using AndroidX, please use the following dependency:
+Add the following multidex dependency to the `dependencies` block in app/build.gradle. Be sure to add the latest release for multidex library. If you are not using AndroidX, please use the following dependency:
 
 ```groovy
 implementation 'com.android.support:multidex:1.0.3'
 ```
 
-If you are not using AndroidX, use the following dependency instead of the previous one:
+If you are using AndroidX, use the following dependency instead of the previous one:
 
 ```groovy
 implementation 'androidx.multidex:multidex:2.0.1'
