@@ -1,5 +1,5 @@
 # React Native Bridge For AppSamurai Attribution SDK
-React Native Bridge For AppSamurai Attribution SDK is a project for React Native users to use AppSamurai Attribution SDK.
+React Native Bridge For AppSamurai Attribution SDK is a project for React Native applications to use AppSamurai Attribution SDK.
 
 [![alt text](https://appsamurai.com/wp-content/uploads/2018/10/as_dark_logotype-8.png "AppSamurai")](https://www.appsamurai.com)
 
@@ -66,7 +66,7 @@ public void onCreate() {
 
 **For Publishers Supporting Android API Level < 21**
 
-If your minSdkVersion is set to 20 or lower and when multidex is enabled you need to do additional changes. Please import androidx.multidex.MultiDexApplication package instead of android.app.Application package in your MainApplication file.
+If your minSdkVersion is set to 20 or lower and when multidex is enabled you need to do additional changes. Please import MultiDexApplication package instead of Application package in your MainApplication file.
 
 ```java
 import androidx.multidex.MultiDexApplication;
@@ -103,7 +103,7 @@ import AsAttributionSdkBridge from 'react-native-as-attribution-sdk-bridge';
 Using AppSamurai Attribution SDK, you are able to track the frequency of custom events by placing the following code piece into your own application code. You can also attach data to your events. If you are planning to attach data to your event, make sure your map is JSON serializable.
 ``` js
 AsAttributionSdkBridge.track("string-event-name")
-AsAttributionSdkBridge.trackWithData(map<String:JSONSerializableObject>)
+AsAttributionSdkBridge.trackWithData(map<String:"<JSON Serializable Object>">)
 ```
 Examples:
 ``` js
