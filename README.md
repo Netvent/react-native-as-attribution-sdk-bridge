@@ -32,7 +32,7 @@ Then you need to add the following initialization line to your application’s `
 "your-user-id" parameter should be your user id retrieved from AppSamurai User Dashboard, you can use your user id for integration purposes.
 
 ### Android Platform Notes
-Minimum supported SDK version is 14.
+Minimum supported SDK version is 14. Please make sure that you are using the latest version of gradle and gradle android plugin.
 You need to add `multidex` support to Android project. You can do this by adding the following line to app’s gradle.
 ```groovy
 defaultConfig {
@@ -66,7 +66,8 @@ public void onCreate() {
 
 **For Publishers Supporting Android API Level < 21**
 
-There are dependency problems for API Level lower than 21 when multi dex is enabled. In order to fix these problem, please import androidx.multidex.MultiDexApplication package instead of android.app.Application package in your MainApplication file:
+If your minSdkVersion is set to 20 or lower and when multidex is enabled you need to do additional changes. Please import androidx.multidex.MultiDexApplication package instead of android.app.Application package in your MainApplication file.
+
 ```java
 import androidx.multidex.MultiDexApplication;
 ```
@@ -76,6 +77,20 @@ Then extend your MainApplication class with MultiDexApplication instead of Appli
 public class MainApplication extends MultiDexApplication implements ReactApplication {
     ...
 }
+```
+
+If the previous solution does not fit for you, you can apply another solution from https://developer.android.com/studio/build/multidex.html#mdex-gradle.
+
+Add the following multidex dependency to the `dependencies` block in app/build.gradle. Be sure to add the latest release for multidex library. If you are using AndroidX, please use the following dependency:
+
+```groovy
+implementation 'com.android.support:multidex:1.0.3'
+```
+
+If you are not using AndroidX, use the following dependency instead of the previous one:
+
+```groovy
+implementation 'androidx.multidex:multidex:2.0.1'
 ```
 
 ## Usage in React-Native
