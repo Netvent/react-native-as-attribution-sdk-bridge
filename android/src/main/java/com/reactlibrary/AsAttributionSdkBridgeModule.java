@@ -26,7 +26,11 @@ public class AsAttributionSdkBridgeModule extends ReactContextBaseJavaModule {
 
     @ReactMethod
     public void track(String eventName) {
-        AttributionSDK.Instance.track(eventName);
+        try{
+            AttributionSDK.Instance.track(eventName);
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
     }
 
     @ReactMethod
@@ -40,21 +44,26 @@ public class AsAttributionSdkBridgeModule extends ReactContextBaseJavaModule {
 
     @ReactMethod
     public void setLogLevel(String logLevel) {
-        switch (logLevel) {
-            case "OFF":
-                AttributionSDK.Instance.setLogLevel(ASLog.Level.OFF);
-                break;
-            case "DEBUG":
-                AttributionSDK.Instance.setLogLevel(ASLog.Level.DEBUG);
-                break;
-            case "WARNING":
-                AttributionSDK.Instance.setLogLevel(ASLog.Level.WARNING);
-                break;
-            case "ERROR":
-                AttributionSDK.Instance.setLogLevel(ASLog.Level.ERROR);
-                break;
-            default:
-                break;
+        try {
+            switch (logLevel) {
+                case "OFF":
+                    AttributionSDK.Instance.setLogLevel(ASLog.Level.OFF);
+                    break;
+                case "DEBUG":
+                    AttributionSDK.Instance.setLogLevel(ASLog.Level.DEBUG);
+                    break;
+                case "WARNING":
+                    AttributionSDK.Instance.setLogLevel(ASLog.Level.WARNING);
+                    break;
+                case "ERROR":
+                    AttributionSDK.Instance.setLogLevel(ASLog.Level.ERROR);
+                    break;
+                default:
+                    break;
+            }
+        } catch (Exception ex) {
+            ex.printStackTrace();
         }
+
     }
 }
