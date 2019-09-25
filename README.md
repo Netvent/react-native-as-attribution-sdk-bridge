@@ -103,7 +103,7 @@ import AsAttributionSdkBridge from 'react-native-as-attribution-sdk-bridge';
 Using AppSamurai Attribution SDK, you are able to track the frequency of custom events by placing the following code piece into your own application code. You can also attach data to your events. If you are planning to attach data to your event, make sure your map is JSON serializable.
 ``` js
 AsAttributionSdkBridge.track("string-event-name")
-AsAttributionSdkBridge.trackWithData(map<String:"<JSON Serializable Object>">)
+AsAttributionSdkBridge.trackWithData("string-event-name", map<String:"<JSON Serializable Object>">)
 ```
 Examples:
 ``` js
