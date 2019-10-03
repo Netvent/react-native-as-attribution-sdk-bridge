@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
 
   s.dependency "React"
   s.dependency "ASAttributionSDK"
-	
+	s.swift_version = ['5.0', '5.1']
   # s.dependency "..."
 end
 
