@@ -1,7 +1,7 @@
 {
   "name": "react-native-as-attribution-sdk-bridge",
   "title": "React Native As Attribution Sdk Bridge",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "AS Attribution SDK Bridge",
   "main": "index.js",
   "scripts": {
