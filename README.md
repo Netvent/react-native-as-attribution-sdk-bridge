@@ -44,7 +44,7 @@ defaultConfig {
 
 Add the following dependency to the `dependencies` block in app/build.gradle. Be sure to add the latest release for attribution sdk which is: [ ![Download](https://api.bintray.com/packages/appsamurai/maven/attribution/images/download.svg) ](https://bintray.com/appsamurai/maven/attribution/_latestVersion)
 ```groovy
-implementation 'com.ppsmr.attribution.attributionsdk:attribution:1.0.1'
+implementation 'com.ppsmr.attribution.attributionsdk:attribution:<latest-version>'
 ```
 
 You need to initialize ASAttributionSDK to use AppSamurai Attribution SDK. 
