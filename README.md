@@ -131,6 +131,9 @@ AppSamurai SDK logging level can be changed with setLogLevel after SDK initializ
 AsAttributionSdkBridge.setLogLevel("string-log-level")
 ```
 
+## Sample Usages
+Sample usages can be found in the repository and custom event tracking example can be found in App.js file.
+
 ## Author
 App Samurai Mobile Team, mobile@appsamurai.com
 ## License
