@@ -54,7 +54,7 @@ repositories {
 
 dependencies {
     implementation "com.facebook.react:react-native:${safeExtGet('reactnativeVersion', '+')}"
-    implementation 'com.ppsmr.attribution.attributionsdk:attribution:1.0.14'
+    implementation 'com.ppsmr.attribution.attributionsdk:attribution:1.0.15'
 }
 
 def configureReactNativePom(def pom) {
